@@ -1,0 +1,261 @@
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+        for (var i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove("active-link");
+        }
+
+        for (var i = 0; i < tabcontents.length; i++) {
+            tabcontents[i].classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+        
+    function openmenu() {
+        sidemenu.style.right = "0";
+}
+
+    function closemenu() {
+        sidemenu.style.right = "-200px";
+}
+</script>
+    
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>WELCOME TO MY PORTOFOLIO</title>
+        <link rel="shorcut icon" href="logo.jpg" type="image/x-icon">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    </head>
+
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <div class="col-1">
+                    <img src="logo 1.png" alt="logoo">
+                    </div>
+                    <ul id="sidemenu">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portofolio">Portofolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <i class="fa fa-times" aria-hidden="true" onclick="closemenu()"></i>
+                        <ul>
+                            <i class="fa fa-bars" aria-hidden="true" onclick="openmenu()"></i>
+                        </ul>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <p>UI/IX Programmer</p>
+                    <h1>Hi, I,m <span>Arnan Dwi Pangestu</span> <br>From Indonesia </h1>
+                </div>
+        </div>
+
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="foto 1.jpeg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>
+                            You can't just ask customers what they want and then try to give it to them.
+                            By the time you build the product, they will want something new. We are programmers.
+                            Programmers, in their hearts, are architects. The first thing they want to do when
+                            they arrive at a place is to level it and build something new and grand. We are not
+                            happy with gradual renovations: tinkering, repairing or creating a flower garden
+                        </p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('Skills')">
+                                Skills
+                            </p>
+                            <p class="tab-links" onclick="opentab('Experience')">
+                                Experience
+                            </p>
+                            <p class="tab-links" onclick="opentab('Education')">
+                                Education
+                            </p>
+                        </div>
+                        <div class="tab-contents active-tab" id="Skills">
+                            <ul>
+                                <li><span>Graphic Desaign</span><br>Editing Desaign</li>
+                                <li><span>Editing</span><br>Video Editing</li>
+                                <li><span>Programmer</span><br>Web Development and UI UX Desaign</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Experience">
+                            <ul>
+                                <li>
+                                    <span>2020 - Curent</span><br>University Duta Bangsa
+                                </li>
+                                <li>
+                                    <span>2017 - 2020</span><br>High School Kristen 1 Surakarta
+                                </li>
+                                <li>
+                                    <span>2013 - 2017</span><br>Junior High Shcool Kristen 1 Surakarta
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Education">
+                            <ul>
+                                <li><span>2020</span><br>Information Technology</li>
+                                <li><span>2019</span><br>Editing Video</li>
+                                <li><span>2018</span><br>Graphic Desaign</li>
+                                <li><span>2017</span><br>Pascal, computer network</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="services">
+            <div class="container">
+                <h1 class="sub-title">My Services</h1>
+                <div class="services-list">
+                    <div>
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                        <h2>Graphic Desaign</h2>
+                        <p>
+                            a plan or drawing made to show the appearance and
+                            function or how a building,clothing or other object works
+                            before it is made.
+                        </p>
+                        <a href="#">Learn More</a>
+                    </div>
+                    <div>
+                        <i class="fa fa-video-camera" aria-hidden="true"></i>
+                        <h2>Editing Video</h2>
+                        <p>
+                            the process of selecting and connecting the images that have 
+                            been taken. Meanwhile, editing after the film is finished 
+                            (ready to watch) is a technique used to connect each shot.
+                        </p>
+                        <a href="#">Learn More</a>
+                    </div>
+                    <div>
+                        <i class="fa fa-code" aria-hidden="true"></i>
+                        <h2>Programmer</h2>
+                        <p>
+                            work that aims to create a system using a programming language.
+                            Someone who has the skills to write program code (syntax) 
+                            and design systems can also be called a programmer.
+                        </p>
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="portofolio">
+            <div class="container"> 
+                <h1 class="sub-title">My Work</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="gd.jpg" />
+                        <div class="layer">
+                            <h3>Graphic Desaign</h3>
+                            <p>
+                                a plan or drawing made to show the appearance and
+                                function or how a building,clothing or other object works
+                                before it is made.
+                            </p>
+                            <a href="a">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="ev.png" />
+                        <div class="layer">
+                            <h3>Editing Video</h3>
+                            <p>
+                                the process of selecting and connecting the images that have 
+                                been taken. Meanwhile, editing after the film is finished 
+                                (ready to watch) is a technique used to connect each shot.
+                            </p>
+                            <a href="a">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="pm.jpg" />
+                        <div class="layer">
+                            <h3>Programmer</h3>
+                            <p>
+                                work that aims to create a system using a programming language.
+                                Someone who has the skills to write program code (syntax) 
+                                and design systems can also be called a programmer.
+                            </p>
+                            <a href="a">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a href="a" class="btn">See More</a>
+            </div>
+        </div>
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p><i class="fa fa-envelope-o" aria-hidden="true"></i>arnandwi01@gmail.com</p>
+                        <p><i class="fa fa-paper-plane-o" aria-hidden="true"></i>+628972863636</p>
+                        <div class="social-icons">
+                            <a href="https://facebook.com/Ar Ar">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://instagram.com/nan.dp_">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://wa.me/+628972863636">
+                                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <a href="CV.jpg" download class="btn btn2">Download CV</a>
+                    </div>
+                    <div class="contact-right">
+                        <form>
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="Your Email"
+                                required
+                            />
+                            <textarea
+                                name="Massage"
+                                rows="20"
+                                placeholder="Your Massage"
+                            ></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>
+                    Copyright <i class="fa fa-copyright" aria-hidden="true"></i> Arnan. Made with
+                    <i class="fa fa-heart" aria-hidden="true"></i> By Arnan
+                </p>
+            </div>
+        </div>
+    </body> 
+</html>
